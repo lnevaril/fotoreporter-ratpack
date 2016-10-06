@@ -1,0 +1,26 @@
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: "io.ratpack.ratpack-java"
+
+sourceCompatibility = 1.8
+
+buildscript {
+	repositories {
+		jcenter()
+	}
+	dependencies {
+		classpath "io.ratpack:ratpack-gradle:1.4.2"
+	}
+}
+
+dependencies {
+	compile 'org.mongodb:mongodb-driver:3.3.0'
+	compile 'org.mongodb.morphia:morphia:1.2.1'
+	compile group: 'com.google.code.gson', name: 'gson', version: '2.3.1'
+}
+
+
+repositories {
+	mavenCentral()
+}
